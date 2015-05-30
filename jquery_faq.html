@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery FAQ list</title>
+
+	<h1>State Park FAQ</h1>
+</head>
+<body>
+
+
+	<script src="/js/jquery-2.1.4.min.js"></script>
+
+	<dl>
+		<dt>Should I bring water while hiking?</dt>
+		<dd class="invisible">-Yes.  Staying hydrated while hiking is very important.</dd>
+
+		<dt>Is it ok to feed the wildlife while on the trails?</dt>
+		<dd class="invisible">-No.  Feeding the wildlife is prohibited by state law.</dd>
+
+		<dt>Do you have to wear shoes?</dt>
+		<dd class="invisible">-Yes.  Unless you want some sick looking blisters.</dd>
+
+		<dt>Can you litter?</dt>
+		<dd class="invisible">-No.  Are you dumb?</dd>
+
+		<dt>Where should we park?</dt>
+		<dd class="invisible">-There are designated parking areas throughout the park.</dd>
+
+		<dt>How do I reserve a camping spot?</dt>
+		<dd class="invisible">-You can reserve a camping spot online on the park website.</dd>
+
+	</dl>
+
+	<a href="#" id="hide-answers">Click to toggle the answers of FAQ</a>
+
+
+	<h3>Garner State Park Facts</h3>
+		<ul class="garner-facts">
+			<li class="first-li">The water is cold</li>
+			<li>The scenery is awesome</li>
+			<li>Walmart is far</li>
+			<li>Bring Sunscreen</li>
+		</ul>
+
+	<h3>Enchanted Rock State Park Facts</h3>
+		<ul class="enchanted-facts">
+			<li class="first-li">Its super awesome</li>
+			<li>Bring a flashlight</li>
+			<li>Dont't litter</li>
+			<li>Get there early</li>
+		</ul>
+
+	<h3>Big Bend State Park Facts</h3>
+		<ul class="big-facts">
+			<li class="first-li">Bring hiking shoes</li>
+			<li>Watch out for coyotes and immigrants</li>
+			<li>Bring water</li>
+			<li>Don't fall off the cliffs</li>
+		</ul>
+
+	<script>
+
+	"use strict";
+
+	$(document).ready(function() {
+        $('#hide-answers').click(function(event) {
+        	event.preventDefault();
+            $('dd').slideToggle(1500);
+        });
+        
+		$('ul').each(function(index) {
+			$(this).children().first().css('font-weight', 'bold');
+		});
+
+		$('h3').click(function() {
+        	$(this).next().slideToggle(3000);
+    	});
+
+
+	});
+
+	</script>
+	
+</body>
+
+</body>
+</html>
